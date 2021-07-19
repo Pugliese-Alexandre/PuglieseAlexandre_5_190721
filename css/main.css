@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap");
+body {
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+li {
+  font-family: "Otomanopee One";
+}
+
+.navMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navMenu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navMenu li {
+  margin: 1.5rem;
+  list-style-type: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.acolor {
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.acolor:hover {
+  color: mediumslateblue;
+}
+
+.fas {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.acolor {
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.acolor:hover {
+  color: mediumslateblue;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body {
+  background-color: #f3e9f1;
+}
+/*# sourceMappingURL=main.css.map */

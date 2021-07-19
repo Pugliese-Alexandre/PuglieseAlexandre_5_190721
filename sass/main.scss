@@ -1,6 +1,5 @@
 // 1 - BASE 
 @import '1-Base/_typography';
-@import '1-Base/_loader';
 
 // 2 - UTILS 
 @import '2-Utils/_fonctions';
@@ -17,7 +16,8 @@
 @import '4-Composants/_icones';
 
 // 5 - PAGES
+@import '5-Pages/_header';
 
 
 // 6 - THEMES 
-
+@import '6-Themes/_pink';

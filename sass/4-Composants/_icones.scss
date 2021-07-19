@@ -1,0 +1,13 @@
+.fas {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+}
+
+
+.acolor{
+    transition: all 1s ease-out;
+    &:hover{
+        color: mediumslateblue;
+    } 
+
+}
