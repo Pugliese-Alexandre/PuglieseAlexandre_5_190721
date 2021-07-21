@@ -9,6 +9,11 @@ li {
   font-family: "Otomanopee One";
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .navMenu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -43,9 +48,72 @@ a {
   color: mediumslateblue;
 }
 
+.reseauxSociaux {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .fas {
   margin-right: 0.5rem;
   font-size: 1.5rem;
+}
+
+#twitter, #facebook, #instagram {
+  font-size: 1.5rem;
+  margin: 1rem;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+#twitter:hover, #facebook:hover, #instagram:hover {
+  color: mediumslateblue;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.logoPosition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logo {
+  width: 640px;
+  height: 320px;
+}
+
+.navMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navMenu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navMenu li {
+  margin: 1.5rem;
+  list-style-type: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
 .acolor {
@@ -55,15 +123,6 @@ a {
 
 .acolor:hover {
   color: mediumslateblue;
-}
-
-.logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 body {

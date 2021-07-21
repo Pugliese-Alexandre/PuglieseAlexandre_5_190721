@@ -3,11 +3,12 @@
     font-size: 1.5rem;
 }
 
-
-.acolor{
+#twitter, #facebook, #instagram {
+    font-size: 1.5rem;
+    margin: 1rem;
     transition: all 1s ease-out;
     &:hover{
         color: mediumslateblue;
+        transform: scale(1.5);
     } 
-
 }
