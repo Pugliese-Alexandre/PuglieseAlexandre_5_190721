@@ -1,0 +1,19 @@
+{
+  "name": "p5_pugliese_alexandre",
+  "version": "1.0.0",
+  "description": "P5_Pugliese_Alexandre",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pugliese-Alexandre/PuglieseAlexandre_5_190721.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pugliese-Alexandre/PuglieseAlexandre_5_190721/issues"
+  },
+  "homepage": "https://github.com/Pugliese-Alexandre/PuglieseAlexandre_5_190721#readme"
+}
