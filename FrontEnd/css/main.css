@@ -9,6 +9,14 @@ li {
   font-family: "Otomanopee One";
 }
 
+a {
+  font-family: "Roboto";
+}
+
+h2 {
+  font-family: 'Otomanopee One';
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -48,10 +56,89 @@ a {
   color: mediumslateblue;
 }
 
-.reseauxSociaux {
+.footer__reseauxSociaux {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.reseauSocial {
+  margin: 1rem;
+}
+
+.separateur {
+  width: 100%;
+}
+
+.footer_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-bottom: 3rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding-bottom: 0.3rem;
+}
+
+.main__Produit {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1400px;
+}
+
+.camera__Picture {
+  width: 360px;
+  height: 240px;
+}
+
+.camera__Title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.camera__article {
+  width: 360px;
+  height: 421px;
+  margin-right: 5rem;
+  margin-bottom: 5rem;
+}
+
+.camera__Price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .fas {
@@ -59,14 +146,14 @@ a {
   font-size: 1.5rem;
 }
 
-#twitter, #facebook, #instagram {
+#twitter, #facebook, #instagram, #youtube {
   font-size: 1.5rem;
   margin: 1rem;
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
 
-#twitter:hover, #facebook:hover, #instagram:hover {
+#twitter:hover, #facebook:hover, #instagram:hover, #youtube:hover {
   color: mediumslateblue;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
@@ -89,6 +176,7 @@ body {
 .logo {
   width: 640px;
   height: 320px;
+  padding-bottom: 5rem;
 }
 
 .navMenu {
