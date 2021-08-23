@@ -6,7 +6,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin-inline: auto;
+    margin: auto;
     max-width: 1400px;
     
 }
@@ -32,3 +32,32 @@
     display: flex;
     justify-content: flex-end;
 }
+
+
+// Page Secondaire : Message d'erreur 
+
+.message__Erreur {
+    color: red;
+    text-align: center;
+    padding-bottom: 5rem;
+}
+ 
+
+// Page Secondaire Style des caméras
+
+.image__Camera_PageSecondaire {
+    width: 400px;
+}
+
+.produit_PageSecondaire {
+    display: flex;
+}
+
+.produit__Picture_PageSecondaire {
+    margin: auto;
+}
+
+.main__Produit_PageSecondaire {
+    margin: 5rem;
+}
+

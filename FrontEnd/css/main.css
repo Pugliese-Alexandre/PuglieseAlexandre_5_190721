@@ -13,8 +13,27 @@ a {
   font-family: "Roboto";
 }
 
+h1 {
+  font-family: "Roboto";
+  font-weight: 700;
+}
+
 h2 {
   font-family: 'Otomanopee One';
+}
+
+.produit__ID_PageSecondaire, .produit__Name_PageSecondaire, .produit__Description_PageSecondaire, .produit__Price_PageSecondaire {
+  font-family: "Roboto";
+}
+
+#option__Produit {
+  font-family: "Roboto";
+  font-weight: 700;
+}
+
+.message__Erreur {
+  font-family: "Roboto";
+  font-weight: 700;
 }
 
 body {
@@ -108,7 +127,7 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-inline: auto;
+  margin: auto;
   max-width: 1400px;
 }
 
@@ -140,6 +159,39 @@ li {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.message__Erreur {
+  color: red;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.image__Camera_PageSecondaire {
+  width: 400px;
+}
+
+.produit_PageSecondaire {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.produit__Picture_PageSecondaire {
+  margin: auto;
+}
+
+.main__Produit_PageSecondaire {
+  margin: 5rem;
+}
+
+#option__Produit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 2rem;
+  width: 10rem;
+  text-align-last: center;
 }
 
 .fas {

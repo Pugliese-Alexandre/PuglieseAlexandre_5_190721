@@ -10,10 +10,17 @@ fetch("http://localhost:3000/api/cameras").then(response => response.json()).the
 
 function displayProduct(product){
     return `
-    <article class="camera__article">
+    <a href="html/produit.html?id=${product._id}"><article class="camera__article">
         <h1 class="camera__Title">${product.name}</h1>
         <p class="camera__Description">${product.description}</p>
-        <p class="camera__Price">${product.price}</p>
+        <p class="camera__Price">${displayPrice(product.price)}</p>
         <img class="camera__Picture" src="${product.imageUrl}">
-    </article>`
+    </article></a>`
+}
+
+// Prix cents > euro 
+
+
+function displayPrice(price){
+    return(price / 100).toFixed(2) + "€"
 }

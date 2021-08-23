@@ -14,6 +14,31 @@ a {
     font-family: "Roboto";
 }
 
-h2{
+h1 {
+    font-family: "Roboto";
+    font-weight: 700;
+}
+
+h2 {
     font-family: 'Otomanopee One';
+}
+
+// Page Secondaire : Texte Produit 
+
+.produit__ID_PageSecondaire, .produit__Name_PageSecondaire, .produit__Description_PageSecondaire, .produit__Price_PageSecondaire {
+    font-family: "Roboto";
+}
+
+// Page Secondaire : Texte Option Lentilles 
+
+#option__Produit{
+    font-family: "Roboto";
+    font-weight: 700;
+}
+
+// Page Secondaire : Message d'erreur 
+
+.message__Erreur {
+    font-family: "Roboto";
+    font-weight: 700;
 }
