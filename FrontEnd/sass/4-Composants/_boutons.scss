@@ -21,8 +21,8 @@
     height: 55px;
     justify-content: center;
     align-items: center;
-    border: none;
-    border-radius: 1rem;
+    border: 1;
+    border-radius: 2rem;
     transition: 0.5s;
     cursor: pointer;
     background-size: 200%;
@@ -39,5 +39,6 @@
 
     &:active {
         transform: scale(1.1);
+        transition: 1s;
     }
 }
