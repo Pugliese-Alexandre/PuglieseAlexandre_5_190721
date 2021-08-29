@@ -36,6 +36,11 @@ h2 {
   font-weight: 700;
 }
 
+#btn-envoyer {
+  font-family: "Roboto";
+  font-weight: 600;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -194,6 +199,47 @@ li {
   text-align-last: center;
 }
 
+.bouton__Commander {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 200px;
+}
+
+#btn-envoyer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 175px;
+  height: 55px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  border-radius: 1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  background-size: 200%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#edbc80), color-stop(#c09fef), to(#edbc80));
+  background-image: linear-gradient(to right, #edbc80, #c09fef, #edbc80);
+}
+
+#btn-envoyer:hover {
+  background-position: right;
+}
+
+#btn-envoyer:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .fas {
   margin-right: 0.5rem;
   font-size: 1.5rem;
@@ -210,6 +256,11 @@ li {
   color: mediumslateblue;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
+}
+
+#fas-btn {
+  font-size: 1.01rem;
+  padding: 0.5rem;
 }
 
 body {
