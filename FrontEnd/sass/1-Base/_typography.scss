@@ -25,13 +25,16 @@ h2 {
 
 // Page Secondaire : Texte Produit 
 
-.produit__ID_PageSecondaire, .produit__Name_PageSecondaire, .produit__Description_PageSecondaire, .produit__Price_PageSecondaire {
+.produit__ID_PageSecondaire,
+.produit__Name_PageSecondaire,
+.produit__Description_PageSecondaire,
+.produit__Price_PageSecondaire {
     font-family: "Roboto";
 }
 
 // Page Secondaire : Texte Option Lentilles 
 
-#option__Produit{
+#option__Produit {
     font-family: "Roboto";
     font-weight: 700;
 }
@@ -47,5 +50,33 @@ h2 {
 
 #btn-envoyer {
     font-family: "Roboto";
+    font-weight: 600;
+}
+
+// Bouton - Page Panier - "Vider le Panier"
+
+#btn-Delete-Bucket {
+    font-family: "Roboto";
+    font-weight: 600;
+}
+
+// Bouton - Page Panier - "Passer la commande"
+
+#btn-checkout {
+    font-family: "Roboto";
+    font-weight: 600;
+}
+
+// Page Panier - Déscription des produits 
+
+.panier__Description_typography {
+    font-family: "Roboto";
+    font-weight: 400;  
+}
+
+// Page Panier - Titre H1
+
+.main__Panier_Title {
+    font-family: 'Otomanopee One';
     font-weight: 600;
 }

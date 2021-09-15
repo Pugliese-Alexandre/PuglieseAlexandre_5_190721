@@ -19,3 +19,15 @@
     font-size: 1.01rem;
     padding: 0.5rem;
 }
+
+// Icone du bouton "Supprimer l'article du Panier"
+
+#Icone_Delete {
+    font-size: 1rem;
+    transition: all 1s ease-out;
+    cursor: pointer;
+    &:hover{
+        color: mediumslateblue;
+        transform: scale(1.1);
+    } 
+}

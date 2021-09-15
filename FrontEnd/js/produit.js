@@ -8,6 +8,7 @@ console.log(urlSearchParams);
 
 const leId = urlSearchParams.get("id")
 console.log(leId);
+
 fetch("http://localhost:3000/api/cameras/" + leId).then(response => response.json()).then(data => {
     console.log(data)
     if (data._id === undefined) {
@@ -17,7 +18,6 @@ fetch("http://localhost:3000/api/cameras/" + leId).then(response => response.jso
     let container = document.querySelector(".main__Produit_PageSecondaire");
 
     container.innerHTML = `
-
     <div class="produit_PageSecondaire">
     <div class="produit__Picture_PageSecondaire">
         <img class="image__Camera_PageSecondaire" src="${data.imageUrl}">
@@ -42,6 +42,7 @@ fetch("http://localhost:3000/api/cameras/" + leId).then(response => response.jso
        <button id="btn-envoyer" type="submit" name="btn-envoyer"> <i class="fas fa-shopping-cart" id="fas-btn"></i>Ajouter au panier</button>    
        </div>
     `;
+
     const idForm = document.querySelector("#option__Produit")
     console.log(idForm)
     //Sélection du bouton ajouter l'article au panier
@@ -63,9 +64,40 @@ fetch("http://localhost:3000/api/cameras/" + leId).then(response => response.jso
             idProduitSelectionner: data._id,
             option__Produit: choixForm,
             prix: data.price / 100
-        }
+        };
 
         console.log(option__Produit);
+        // --------------------------------- Local Storage ---------------------------------
+
+        // Déclaration de la variable 
+        let produitEnregistreDansLocalStorage = JSON.parse(localStorage.getItem("produit"));
+        console.log(produitEnregistreDansLocalStorage)
+
+        // Fonction fenetre Pop-up
+        const popupConfirmation = () => {
+            if (window.confirm(`${data.name} option: ${choixForm} a bien été ajouté au panier
+    Désirez-vous aller sur le panier "OK" ou revenir sur la page d'acceuil "ANNULER"`)) {
+                window.location.href = "/FrontEnd/html/panier.html";
+            } else {
+                window.location.href = "/FrontEnd/index.html";
+            }
+        }
+
+        // Si il y a déja des produits d'enregistré dans le local storage
+        if (produitEnregistreDansLocalStorage) {
+            produitEnregistreDansLocalStorage.push(option__Produit);
+            localStorage.setItem("produit", JSON.stringify(produitEnregistreDansLocalStorage));
+            console.log(produitEnregistreDansLocalStorage)
+            popupConfirmation();
+        }
+
+        // Si il n'y a pas de produit d'enregistré dans le local storage
+        else {
+            produitEnregistreDansLocalStorage = [];
+            produitEnregistreDansLocalStorage.push(option__Produit);
+            localStorage.setItem("produit", JSON.stringify(produitEnregistreDansLocalStorage));
+            console.log(produitEnregistreDansLocalStorage);
+        }
     });
 
 
@@ -82,16 +114,3 @@ fetch("http://localhost:3000/api/cameras/" + leId).then(response => response.jso
 function displayPrice(price) {
     return (price / 100).toFixed(2) + "€"
 }
-
-// Bouton Commander 
-
-var cart = 0
-var btnAdd = document.querySelector('#btn-envoyer')
-var element = document.querySelector('btn-envoyer')
-element.innerText = cart
-btnAdd.addEventListener('click', function(){
-
-    cart++
-    element.innerText = cart
-    console.log(cart);
-})

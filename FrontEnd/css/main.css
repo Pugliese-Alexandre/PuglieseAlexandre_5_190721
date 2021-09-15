@@ -22,7 +22,10 @@ h2 {
   font-family: 'Otomanopee One';
 }
 
-.produit__ID_PageSecondaire, .produit__Name_PageSecondaire, .produit__Description_PageSecondaire, .produit__Price_PageSecondaire {
+.produit__ID_PageSecondaire,
+.produit__Name_PageSecondaire,
+.produit__Description_PageSecondaire,
+.produit__Price_PageSecondaire {
   font-family: "Roboto";
 }
 
@@ -38,6 +41,26 @@ h2 {
 
 #btn-envoyer {
   font-family: "Roboto";
+  font-weight: 600;
+}
+
+#btn-Delete-Bucket {
+  font-family: "Roboto";
+  font-weight: 600;
+}
+
+#btn-checkout {
+  font-family: "Roboto";
+  font-weight: 600;
+}
+
+.panier__Description_typography {
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+.main__Panier_Title {
+  font-family: 'Otomanopee One';
   font-weight: 600;
 }
 
@@ -190,6 +213,102 @@ li {
   margin: 5rem;
 }
 
+.panier__Description_typography {
+  display: inline;
+}
+
+.main__Panier_Title {
+  font-size: x-large;
+}
+
+.main__Panier {
+  margin: 0 10rem 0 10rem;
+  position: relative;
+}
+
+.main__Panier_Title {
+  margin: 5rem;
+}
+
+.grid-panier {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-row-gap: 1rem;
+      grid-template-areas: "main__Panier_container" "container__Recapitulatif" "panier__Final_Price";
+}
+
+.main__Panier_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 80vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid black;
+}
+
+.container__Recapitulatif {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.panier__Final_Price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5rem;
+}
+
+#btn-Delete-Bucket {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+#btn-checkout {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.container__Bucket_Empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+}
+
+.panier__Final_Price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem;
+}
+
 #option__Produit {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -242,6 +361,96 @@ li {
   transition: 1s;
 }
 
+.btn__Delete_Item {
+  border: none;
+}
+
+.btn__Empty_Bucket {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#btn-Delete-Bucket {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px;
+  width: 165px;
+  height: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1;
+  border-radius: 2rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  background-size: 200%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#edbc80), color-stop(#c09fef), to(#edbc80));
+  background-image: linear-gradient(to right, #edbc80, #c09fef, #edbc80);
+}
+
+#btn-Delete-Bucket:hover {
+  background-position: right;
+}
+
+#btn-Delete-Bucket:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.btn__checkout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#btn-checkout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px;
+  width: 165px;
+  height: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1;
+  border-radius: 2rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  background-size: 200%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#edbc80), color-stop(#c09fef), to(#edbc80));
+  background-image: linear-gradient(to right, #edbc80, #c09fef, #edbc80);
+}
+
+#btn-checkout:hover {
+  background-position: right;
+}
+
+#btn-checkout:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 .fas {
   margin-right: 0.5rem;
   font-size: 1.5rem;
@@ -263,6 +472,19 @@ li {
 #fas-btn {
   font-size: 1.01rem;
   padding: 0.5rem;
+}
+
+#Icone_Delete {
+  font-size: 1rem;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  cursor: pointer;
+}
+
+#Icone_Delete:hover {
+  color: mediumslateblue;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 body {
