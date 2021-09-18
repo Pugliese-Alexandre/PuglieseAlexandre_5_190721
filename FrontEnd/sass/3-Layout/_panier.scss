@@ -55,6 +55,10 @@
     padding-top: 5rem;
 }
 
+.panier__Total_Price {
+    padding-bottom: 1rem;
+}
+
 // Position du boutons "Vider le panier"
 
 #btn-Delete-Bucket {
@@ -85,3 +89,42 @@
     display: flex;
     margin: 2rem;
 }
+
+// Taille des images du panier 
+
+.panier__Picture_camera {
+    width: 300px;
+}
+
+// Formulaire Envoie Commande
+
+#formulaireCommande {
+    border: 2px black solid;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #edbc80;
+}
+
+h2 {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+input {
+   width: 25vw; 
+   height: 21px;
+}
+textarea {
+    width: 25vw;
+    height: 30px;
+}
+}
+

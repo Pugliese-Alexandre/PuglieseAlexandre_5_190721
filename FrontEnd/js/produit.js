@@ -63,7 +63,8 @@ fetch("http://localhost:3000/api/cameras/" + leId).then(response => response.jso
             nomProduit: data.name,
             idProduitSelectionner: data._id,
             option__Produit: choixForm,
-            prix: data.price / 100
+            prix: data.price,
+            imageUrl: data.imageUrl
         };
 
         console.log(option__Produit);
