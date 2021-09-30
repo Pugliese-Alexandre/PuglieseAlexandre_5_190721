@@ -46,6 +46,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-bottom: 15px;
 }
 
 .panier__Final_Price {
@@ -99,12 +100,17 @@
 // Formulaire Envoie Commande
 
 #formulaireCommande {
+    margin: auto;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    width: 40vw;
     border: 2px black solid;
+    border-radius: 2rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #edbc80;
+    background-color: lavender;
 }
 
 h2 {
@@ -119,12 +125,16 @@ form {
     align-items: center;
 
 input {
-   width: 25vw; 
+   width: 15vw; 
    height: 21px;
+   border-radius: 5px;
+   padding-left: 5px;
 }
 textarea {
-    width: 25vw;
+    width: 15vw;
     height: 30px;
+    border-radius: 5px;
+    padding-left: 5px;
 }
 }
 

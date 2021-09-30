@@ -54,6 +54,11 @@ h2 {
   font-weight: 600;
 }
 
+#envoyerFormulaire {
+  font-family: "Roboto";
+  font-weight: 600;
+}
+
 .panier__Total_Price {
   font-family: "Roboto";
   font-weight: 600;
@@ -67,6 +72,19 @@ h2 {
 .main__Panier_Title {
   font-family: 'Otomanopee One';
   font-weight: 600;
+}
+
+label {
+  font-family: 'Otomanopee One';
+  font-weight: 400;
+}
+
+.recapitulatif__Commande_Numero {
+  font-weight: 900;
+}
+
+.recapitulatif__Commande_Price {
+  font-weight: 900;
 }
 
 body {
@@ -106,6 +124,21 @@ a {
 
 .acolor:hover {
   color: mediumslateblue;
+}
+
+#main__Recapitulatif_Commande {
+  text-align: -webkit-center;
+  padding-bottom: 5rem;
+}
+
+.container__Recapitulatif_Commande {
+  width: 40vw;
+  border: 1px solid black;
+  padding-bottom: 1rem;
+}
+
+.recapitulatif__Commande_text {
+  text-align: center;
 }
 
 .footer__reseauxSociaux {
@@ -270,6 +303,7 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 15px;
 }
 
 .panier__Final_Price {
@@ -323,7 +357,12 @@ li {
 }
 
 #formulaireCommande {
+  margin: auto;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  width: 40vw;
   border: 2px black solid;
+  border-radius: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,7 +375,7 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #edbc80;
+  background-color: lavender;
 }
 
 h2 {
@@ -362,13 +401,17 @@ form {
 }
 
 form input {
-  width: 25vw;
+  width: 15vw;
   height: 21px;
+  border-radius: 5px;
+  padding-left: 5px;
 }
 
 form textarea {
-  width: 25vw;
+  width: 15vw;
   height: 30px;
+  border-radius: 5px;
+  padding-left: 5px;
 }
 
 #option__Produit {
@@ -507,6 +550,40 @@ form textarea {
 }
 
 #btn-checkout:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#envoyerFormulaire {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px;
+  width: 210px;
+  height: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1;
+  border-radius: 2rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  background-size: 200%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#edbc80), color-stop(#c09fef), to(#edbc80));
+  background-image: linear-gradient(to right, #edbc80, #c09fef, #edbc80);
+}
+
+#envoyerFormulaire:hover {
+  background-position: right;
+}
+
+#envoyerFormulaire:active {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: 1s;

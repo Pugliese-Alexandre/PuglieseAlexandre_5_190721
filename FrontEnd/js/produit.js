@@ -76,8 +76,8 @@ fetch("http://localhost:3000/api/cameras/" + leId).then(response => response.jso
 
         // Fonction fenetre Pop-up
         const popupConfirmation = () => {
-            if (window.confirm(`${data.name} option: ${choixForm} a bien été ajouté au panier
-    Désirez-vous aller sur le panier "OK" ou revenir sur la page d'acceuil "ANNULER"`)) {
+            if (window.confirm(`${data.name} avec l'option: ${choixForm} a bien été ajouté au panier.
+            Désirez-vous finaliser votre commande "OK" ou continuer vos achats "ANNULER ?"`)) {
                 window.location.href = "/FrontEnd/html/panier.html";
             } else {
                 window.location.href = "/FrontEnd/index.html";
