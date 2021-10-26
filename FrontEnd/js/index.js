@@ -20,7 +20,6 @@ function displayProduct(product){
 
 // Prix cents > euro 
 
-
 function displayPrice(price){
     return(price / 100).toFixed(2) + "€"
 }

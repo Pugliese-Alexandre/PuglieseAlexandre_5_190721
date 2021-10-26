@@ -1,3 +1,4 @@
+      
         // Déclaration de la variable 
         let produitEnregistreDansLocalStorage = JSON.parse(localStorage.getItem("produit"));
         console.log(produitEnregistreDansLocalStorage)
@@ -49,7 +50,7 @@
                 `;
             }
             if (k == produitEnregistreDansLocalStorage.length) {
-                //Injection du code HTML dans la pa page "Panier"
+                //Injection du code HTML dans la page "Panier"
                 positionElement.innerHTML = structureProduitPanier;
             } 
             document.querySelector(".prix__Total").textContent = displayPrice(totalPrice(produitEnregistreDansLocalStorage));
@@ -63,6 +64,7 @@
                 total += products[index].prix
             }
             console.log(total)
+            localStorage.setItem("total", total);
             return total
         }
 
@@ -159,7 +161,7 @@
             const structureFormulaire = `
 
             <div id="formulaireCommande">
-            <h2>Remplissez le formulaire pour valider la commande</h2>
+            <h2 class="formulaireCommande__Title">Remplissez le formulaire pour valider la commande</h2>
             <form>
                 <label for="prenom">Prénom :</label>
                 <input type="text" id="prenom" name="prenom" required>
@@ -214,8 +216,7 @@
             // Mettre  l'objet "formulaireValues" dans le LocalStorage
             if (prenomControle(formulaireValues.prenom) && nomControle(formulaireValues.nom) && codePostalControle(formulaireValues.codePostal) && emailControle(formulaireValues.email) && adresseControle(formulaireValues.adresse)) {
                 localStorage.setItem("formulaireValues", JSON.stringify(formulaireValues));
-             // *************** PROBLEME ICI - 217 et 229 ***************** => localStorage.setItem("prixTotal", JSON.stringify(prixTotal));
-
+             
                 // Mettre les values du formulaire et mettre les produits sélectionnés dans un objet a envoyer vers le serveur
                 const aEnvoyer = {
                     contact: {
@@ -226,7 +227,6 @@
                         email: formulaireValues.email,
                     },
                     products: produitEnregistreDansLocalStorage.map(elt => elt.idProduitSelectionner),
-                   // *************** PROBLEME ICI - 217 et 229 ***************** => prixTotal
                 };
                 envoieVersServeur(aEnvoyer);
             } else {
@@ -236,7 +236,7 @@
 
         function envoieVersServeur(aEnvoyer){
             // Envoie de l'objet "aEnvoyer" vers le serveur 
-            const promise01 = fetch("https://jsonplaceholder.typicode.com/users", {
+            const promise01 = fetch("http://localhost:3000/api/cameras/order", {
                 method: "POST",
                 body: JSON.stringify(aEnvoyer),
                 headers: {
@@ -256,14 +256,14 @@
                         console.log(`Resultat de response.ok : ${response.ok}`);
                 // Récupération de l'id de la response du serveur 
                 console.log("id de response");
-                console.log(contenu._id);
+                console.log(contenu.orderId);
 
                 // Mettre l'id dans le LocalStorage
-                localStorage.setItem("responseId", contenu._id);
+                localStorage.setItem("responseId", contenu.orderId);
                 
                 // Aller vers la page confirmation-commande
                 window.location = "confirmation-commande.html";
-
+                
 
                     } else {
                         console.log(`Réponse du serveur : ${response.status}`);

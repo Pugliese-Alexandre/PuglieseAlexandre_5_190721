@@ -3,11 +3,39 @@ body {
     padding: 0;
 }
 
+// Logo 
+
+.logoPosition {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 640px;
+    height: 320px;
+    padding-bottom: 5rem;
+    @include responsive(tablet-up) {
+        width: 450px;
+    }
+    @include responsive(tablet-zoom) {
+        width: 550px;
+    }
+    @include responsive(tablet-down) {
+        width: 650px;
+    }
+}
+
 // Barre de navigation 
 
 .navMenu {
     display: flex;
     justify-content: flex-end;
+    @include responsive(tablet-up) {
+        justify-content: center;
+    }
+    @include responsive(tablet-zoom) {
+        justify-content: flex-end;
+    }
 
     ul {
         display: flex;
@@ -27,11 +55,10 @@ a {
 .acolor{
     transition: all 1s ease-out;
     &:hover{
-        color: mediumslateblue;
+        color: $color-secondairy;
     } 
 
 }
-
 
 // ********** Page - Confirmation Commande **********
 

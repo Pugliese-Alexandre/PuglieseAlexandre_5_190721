@@ -14,7 +14,8 @@ fetch("http://localhost:3000/api/cameras/" + leId).then(response => response.jso
     if (data._id === undefined) {
         throw new Error("Le produit que vous avez séléctionné est inexistant.")
     }
-    //on recup le conteneur
+
+    // Recup du conteneur
     let container = document.querySelector(".main__Produit_PageSecondaire");
 
     container.innerHTML = `
@@ -38,21 +39,22 @@ fetch("http://localhost:3000/api/cameras/" + leId).then(response => response.jso
         </form>
     </div>
        </div>
-<div class="bouton__Commander">
+    <div class="bouton__Commander">
        <button id="btn-envoyer" type="submit" name="btn-envoyer"> <i class="fas fa-shopping-cart" id="fas-btn"></i>Ajouter au panier</button>    
        </div>
     `;
 
     const idForm = document.querySelector("#option__Produit")
     console.log(idForm)
+
     //Sélection du bouton ajouter l'article au panier
     const btn_envoyerPanier = document.querySelector("#btn-envoyer")
     console.log("btn -", btn_envoyerPanier)
 
     // Ecouter le bouton et envoyer le panier
-
     btn_envoyerPanier.addEventListener("click", (event) => {
-        event.preventDefault()
+    event.preventDefault()
+    alert("Ce produit a été ajouter au panier.")
 
         //Mettre le choix de l'utilisateuir dans une variable 
         const choixForm = idForm.value;
@@ -68,6 +70,7 @@ fetch("http://localhost:3000/api/cameras/" + leId).then(response => response.jso
         };
 
         console.log(option__Produit);
+        
         // --------------------------------- Local Storage ---------------------------------
 
         // Déclaration de la variable 
@@ -75,14 +78,14 @@ fetch("http://localhost:3000/api/cameras/" + leId).then(response => response.jso
         console.log(produitEnregistreDansLocalStorage)
 
         // Fonction fenetre Pop-up
-        const popupConfirmation = () => {
-            if (window.confirm(`${data.name} avec l'option: ${choixForm} a bien été ajouté au panier.
-            Désirez-vous finaliser votre commande "OK" ou continuer vos achats "ANNULER ?"`)) {
-                window.location.href = "/FrontEnd/html/panier.html";
-            } else {
-                window.location.href = "/FrontEnd/index.html";
-            }
-        }
+        // const popupConfirmation = () => {
+        // if (window.confirm(`${data.name} avec l'option: ${choixForm} a bien été ajouté au panier.
+        // Désirez-vous finaliser votre commande "OK" ou continuer vos achats "ANNULER ?"`)) {
+        //        window.location.href = "/FrontEnd/html/panier.html";
+        //    } else {
+        //        window.location.href = "/FrontEnd/index.html";
+        //    }
+        //}
 
         // Si il y a déja des produits d'enregistré dans le local storage
         if (produitEnregistreDansLocalStorage) {
@@ -115,3 +118,4 @@ fetch("http://localhost:3000/api/cameras/" + leId).then(response => response.jso
 function displayPrice(price) {
     return (price / 100).toFixed(2) + "€"
 }
+

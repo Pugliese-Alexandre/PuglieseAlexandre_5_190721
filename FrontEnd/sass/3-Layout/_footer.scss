@@ -14,6 +14,18 @@
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 3rem;
+    @include responsive(tablet-up) {
+        margin: auto;
+        flex-direction: column;
+    @include responsive(tablet-down) {
+        flex-direction: row;
+        }
+    }
+    .footer__about, .footer__informations, .footer__contact {
+        @include responsive(tablet-up) {
+            text-align: center;
+        }
+    }
 }
 
 ul {

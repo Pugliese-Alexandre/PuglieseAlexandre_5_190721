@@ -3,7 +3,7 @@ const responseId = localStorage.getItem("responseId");
 console.log(`responseId : ${responseId}`);
 
 // Récupération du prix total de la commande 
-const prixTotal = localStorage.getItem("prixTotal");
+const prixTotal = displayPrice(localStorage.getItem("total"));
 console.log(`prixTotal : ${prixTotal}`);
 
 // La structure HTML de la page Confirmation Commande
@@ -15,7 +15,7 @@ const structureConfirmationCommande = `
         <div class="recapitulatif_Commande">
             <p class="recapitulatif__Commande_text">Merci pour votre commande.</p>
             <p class="recapitulatif__Commande_text">Votre commande numéro: <span class="recapitulatif__Commande_Numero">${responseId}</span> a bien été validée.</p>
-            <p class="recapitulatif__Commande_text">Le montant de votre commande est de <span class="recapitulatif__Commande_Price">${prixTotal}</span>€</p>
+            <p class="recapitulatif__Commande_text">Le montant de votre commande est de <span class="recapitulatif__Commande_Price">${prixTotal}</span></p>
             <p class="recapitulatif__Commande_text">Au plaisir de vous revoir.</p>
         </div>
 </div>
@@ -25,10 +25,17 @@ const structureConfirmationCommande = `
 positionElement.insertAdjacentHTML("afterbegin", structureConfirmationCommande);
 
 // Effacer tout le local storage sauf le formulaire 
-function enleverCleLocalStorage(key){
+function enleverCleLocalStorage(key) {
     localStorage.removeItem(key);
 };
 
 enleverCleLocalStorage("prixTotal");
 enleverCleLocalStorage("produit");
 enleverCleLocalStorage("responseId");
+
+
+// Prix cents > euro 
+
+function displayPrice(price) {
+    return (price / 100).toFixed(2) + "€"
+}

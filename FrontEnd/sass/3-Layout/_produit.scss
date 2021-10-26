@@ -7,8 +7,14 @@
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
-    max-width: 1400px;
-    
+    max-width: 1400px;    
+    @include responsive(tablet-zoom) {
+        flex-direction: column;
+    }
+    @include responsive(tablet-down) {
+        flex-direction: row;
+        gap: 5rem;
+    }
 }
 
 .camera__Picture {
@@ -26,6 +32,10 @@
     height: 421px;
     margin-right: 5rem;
     margin-bottom: 5rem;
+    @include responsive(tablet-up) {
+        margin: auto;
+        padding-bottom: 3rem;
+    }
 }
 
 .camera__Price {

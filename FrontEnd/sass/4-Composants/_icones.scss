@@ -8,7 +8,7 @@
     margin: 1rem;
     transition: all 1s ease-out;
     &:hover{
-        color: mediumslateblue;
+        color: $color-secondairy;
         transform: scale(1.5);
     } 
 }
@@ -27,7 +27,7 @@
     transition: all 1s ease-out;
     cursor: pointer;
     &:hover{
-        color: mediumslateblue;
+        color: $color-secondairy;
         transform: scale(1.1);
     } 
 }
