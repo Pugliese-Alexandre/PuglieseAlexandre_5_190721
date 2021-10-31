@@ -18,6 +18,9 @@
     position: relative;
     @include responsive(tablet-up) {
         margin: 0 1rem 0 1rem;
+    @include responsive(desktop) {
+        margin: 0 10rem 0 10rem;
+        }
     }
 }
 
@@ -25,6 +28,9 @@
     margin: 5rem;
     @include responsive(tablet-up) {
         margin: 1rem;
+        @include responsive(desktop) {
+            margin: 5rem;
+            }    
     }
 }
 
@@ -48,8 +54,10 @@
     border: 2px solid black;
     @include responsive(tablet-up) {
         min-width: 40vh;
+        @include responsive(desktop) {
+        min-width: 80vh;
+        }    
     }
-    
 }
 
 .container__Recapitulatif {
@@ -59,8 +67,10 @@
     padding-bottom: 15px;
     @include responsive(tablet-up) {
         flex-direction: column;
+    @include responsive(desktop) {
+        flex-direction: row;
+        }    
     }
-    
 }
 
 .panier__Final_Price {
@@ -75,6 +85,9 @@
     @include responsive(tablet-up) {
         padding-bottom: 6rem;
     }
+    @include responsive(desktop) {
+        padding-bottom: 1rem;
+    }    
 }
 
 // Position du boutons "Vider le panier"
@@ -130,6 +143,9 @@
     background-color: lavender;
     @include responsive(tablet-up) {
         width: 96vw;
+        @include responsive(desktop) {
+            width: 40vw;
+        } 
     }
     
 }
@@ -153,6 +169,9 @@ input {
    @include responsive(tablet-up) {
     width: 60vw;
 }
+@include responsive(desktop) {
+    width: 15vw;
+}    
 }
 textarea {
     width: 15vw;
@@ -162,6 +181,9 @@ textarea {
     @include responsive(tablet-up) {
         width: 60vw;
     }
+    @include responsive(desktop) {
+        width: 15vw;
+    }    
 }
 }
 

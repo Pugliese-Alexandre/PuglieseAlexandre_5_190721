@@ -186,6 +186,18 @@ a {
   padding-bottom: 1rem;
 }
 
+@media screen and (min-width: 500px) {
+  .container__Recapitulatif_Commande {
+    width: 90vw;
+  }
+}
+
+@media screen and (min-width: 500px) and (min-width: 1200px) {
+  .container__Recapitulatif_Commande {
+    width: 40vw;
+  }
+}
+
 .recapitulatif__Commande_text {
   text-align: center;
 }
@@ -370,6 +382,12 @@ li {
   }
 }
 
+@media screen and (min-width: 500px) and (min-width: 1200px) {
+  .main__Panier {
+    margin: 0 10rem 0 10rem;
+  }
+}
+
 .main__Panier_Title {
   margin: 5rem;
 }
@@ -377,6 +395,12 @@ li {
 @media screen and (min-width: 500px) {
   .main__Panier_Title {
     margin: 1rem;
+  }
+}
+
+@media screen and (min-width: 500px) and (min-width: 1200px) {
+  .main__Panier_Title {
+    margin: 5rem;
   }
 }
 
@@ -412,6 +436,12 @@ li {
   }
 }
 
+@media screen and (min-width: 500px) and (min-width: 1200px) {
+  .main__Panier_container {
+    min-width: 80vh;
+  }
+}
+
 .container__Recapitulatif {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -430,6 +460,15 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 500px) and (min-width: 1200px) {
+  .container__Recapitulatif {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -452,6 +491,12 @@ li {
 @media screen and (min-width: 500px) {
   .panier__Total_Price {
     padding-bottom: 6rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .panier__Total_Price {
+    padding-bottom: 1rem;
   }
 }
 
@@ -517,6 +562,12 @@ li {
   }
 }
 
+@media screen and (min-width: 500px) and (min-width: 1200px) {
+  #formulaireCommande {
+    width: 40vw;
+  }
+}
+
 .formulaireCommande__Title {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -552,6 +603,12 @@ form input {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  form input {
+    width: 15vw;
+  }
+}
+
 form textarea {
   width: 15vw;
   height: 30px;
@@ -562,6 +619,12 @@ form textarea {
 @media screen and (min-width: 500px) {
   form textarea {
     width: 60vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  form textarea {
+    width: 15vw;
   }
 }
 
