@@ -1,3 +1,4 @@
+
 // Récupération de l'id de la commande (provenant du serveur) dans le local Storage
 const responseId = localStorage.getItem("responseId");
 console.log(`responseId : ${responseId}`);

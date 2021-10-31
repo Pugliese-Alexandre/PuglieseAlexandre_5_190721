@@ -364,8 +364,20 @@ li {
   position: relative;
 }
 
+@media screen and (min-width: 500px) {
+  .main__Panier {
+    margin: 0 1rem 0 1rem;
+  }
+}
+
 .main__Panier_Title {
   margin: 5rem;
+}
+
+@media screen and (min-width: 500px) {
+  .main__Panier_Title {
+    margin: 1rem;
+  }
 }
 
 .grid-panier {
@@ -394,6 +406,12 @@ li {
   border: 2px solid black;
 }
 
+@media screen and (min-width: 500px) {
+  .main__Panier_container {
+    min-width: 40vh;
+  }
+}
+
 .container__Recapitulatif {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -404,6 +422,15 @@ li {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 15px;
+}
+
+@media screen and (min-width: 500px) {
+  .container__Recapitulatif {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .panier__Final_Price {
@@ -420,6 +447,12 @@ li {
 
 .panier__Total_Price {
   padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 500px) {
+  .panier__Total_Price {
+    padding-bottom: 6rem;
+  }
 }
 
 #btn-Delete-Bucket {
@@ -478,6 +511,12 @@ li {
   background-color: lavender;
 }
 
+@media screen and (min-width: 500px) {
+  #formulaireCommande {
+    width: 96vw;
+  }
+}
+
 .formulaireCommande__Title {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -507,11 +546,23 @@ form input {
   padding-left: 5px;
 }
 
+@media screen and (min-width: 500px) {
+  form input {
+    width: 60vw;
+  }
+}
+
 form textarea {
   width: 15vw;
   height: 30px;
   border-radius: 5px;
   padding-left: 5px;
+}
+
+@media screen and (min-width: 500px) {
+  form textarea {
+    width: 60vw;
+  }
 }
 
 #option__Produit {

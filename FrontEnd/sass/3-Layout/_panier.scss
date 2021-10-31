@@ -16,10 +16,16 @@
 .main__Panier {
     margin: 0 10rem 0 10rem;
     position: relative;
+    @include responsive(tablet-up) {
+        margin: 0 1rem 0 1rem;
+    }
 }
 
 .main__Panier_Title{
     margin: 5rem;
+    @include responsive(tablet-up) {
+        margin: 1rem;
+    }
 }
 
 .grid-panier {
@@ -40,6 +46,10 @@
     min-width: 80vh;
     justify-content: center;
     border: 2px solid black;
+    @include responsive(tablet-up) {
+        min-width: 40vh;
+    }
+    
 }
 
 .container__Recapitulatif {
@@ -47,6 +57,10 @@
     justify-content: space-around;
     align-items: center;
     padding-bottom: 15px;
+    @include responsive(tablet-up) {
+        flex-direction: column;
+    }
+    
 }
 
 .panier__Final_Price {
@@ -58,6 +72,9 @@
 
 .panier__Total_Price {
     padding-bottom: 1rem;
+    @include responsive(tablet-up) {
+        padding-bottom: 6rem;
+    }
 }
 
 // Position du boutons "Vider le panier"
@@ -111,6 +128,10 @@
     flex-wrap: wrap;
     justify-content: center;
     background-color: lavender;
+    @include responsive(tablet-up) {
+        width: 96vw;
+    }
+    
 }
 
 .formulaireCommande__Title {
@@ -129,12 +150,18 @@ input {
    height: 21px;
    border-radius: 5px;
    padding-left: 5px;
+   @include responsive(tablet-up) {
+    width: 60vw;
+}
 }
 textarea {
     width: 15vw;
     height: 30px;
     border-radius: 5px;
     padding-left: 5px;
+    @include responsive(tablet-up) {
+        width: 60vw;
+    }
 }
 }
 
