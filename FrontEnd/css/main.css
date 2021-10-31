@@ -412,7 +412,9 @@ li {
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   grid-row-gap: 1rem;
-      grid-template-areas: "main__Panier_container" "container__Recapitulatif" "panier__Final_Price";
+      grid-template-areas: "main__Panier_container"
+ "container__Recapitulatif"
+ "panier__Final_Price";
 }
 
 .main__Panier_container {
@@ -659,7 +661,7 @@ form textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1;
+  border: 1px;
   border-radius: 2rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -706,7 +708,7 @@ form textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1;
+  border: 1px;
   border-radius: 2rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -749,7 +751,7 @@ form textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1;
+  border: 1px;
   border-radius: 2rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -783,7 +785,7 @@ form textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1;
+  border: 1px;
   border-radius: 2rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
