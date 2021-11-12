@@ -13,6 +13,9 @@
     display: flex;
     justify-content: flex-end;
     margin-right: 200px;
+    @include responsive(tablet-up) {
+        padding-top: 2rem ;
+        }
 }
 
 #btn-envoyer {    

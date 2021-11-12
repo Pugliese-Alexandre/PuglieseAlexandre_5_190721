@@ -61,6 +61,9 @@
 
 .produit_PageSecondaire {
     display: flex;
+    @include responsive(tablet-up) {
+        flex-direction: column;
+        }
 }
 
 .produit__Picture_PageSecondaire {

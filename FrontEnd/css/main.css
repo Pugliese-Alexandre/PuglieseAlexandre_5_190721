@@ -355,6 +355,15 @@ li {
   display: flex;
 }
 
+@media screen and (min-width: 500px) {
+  .produit_PageSecondaire {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .produit__Picture_PageSecondaire {
   margin: auto;
 }
@@ -645,6 +654,12 @@ form textarea {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-right: 200px;
+}
+
+@media screen and (min-width: 500px) {
+  .bouton__Commander {
+    padding-top: 2rem;
+  }
 }
 
 #btn-envoyer {

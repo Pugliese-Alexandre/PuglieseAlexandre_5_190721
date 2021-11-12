@@ -10,7 +10,6 @@
 
         let structureProduitPanier = [];
 
-
         // Si le panier est vide = Affichage du Message : Le panier est vide.
         if (produitEnregistreDansLocalStorage === null) {
             const panierVide = `
