@@ -76,7 +76,7 @@ function getParamFromUrl(param) {
     const urlSearchParams = new URLSearchParams(queryString_url_id);
     console.log(urlSearchParams);
 
-    const leId = urlSearchParams.get("param");
+    const leId = urlSearchParams.get(param);
     console.log(leId);
     return leId;
 }
