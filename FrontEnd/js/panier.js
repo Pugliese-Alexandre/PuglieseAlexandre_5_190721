@@ -1,13 +1,8 @@
-      
         // Déclaration de la variable 
         let produitEnregistreDansLocalStorage = JSON.parse(localStorage.getItem("produit"));
-        console.log(produitEnregistreDansLocalStorage)
-
         // L'affichage des produits du panier
         // Selection de la classe ou je vais injecter le code HTML
         let positionElement = document.querySelector(".main__Panier");
-        console.log(positionElement);
-
         let structureProduitPanier = [];
 
         // Si le panier est vide = Affichage du Message : Le panier est vide.
@@ -54,9 +49,7 @@
             } 
             document.querySelector(".prix__Total").textContent = displayPrice(totalPrice(produitEnregistreDansLocalStorage));
         }
-
         // Fonction pour additionner les produits du panier
-
         function totalPrice(products) {
             let total = 0
             for (let index = 0; index < products.length; index++) {
@@ -66,33 +59,20 @@
             localStorage.setItem("total", total);
             return total
         }
-
         // Prix cents > euro 
-
         function displayPrice(price) {
             return (price / 100).toFixed(2) + "€"
         }
-
         // Gestion du bouton "Supprimer l'article"
-
         // Sélection des références de tout les boutons "btn__Delete_Item"
 
         let btn__Delete_Item = document.querySelectorAll(".btn__Delete_Item");
-        console.log(btn__Delete_Item);
-
         for (let l = 0; l < btn__Delete_Item.length; l++) {
             btn__Delete_Item[l].addEventListener("click", (event) => {
                 event.preventDefault();
-
                 // Sélection de l'ID du produit en cliquant sur le bouton
-
                 let id_selectionner_suppression = produitEnregistreDansLocalStorage[l].idProduitSelectionner;
-                console.log("id_selectionner_suppression");
-                console.log(id_selectionner_suppression);
-
                 produitEnregistreDansLocalStorage.splice(l, 1);
-                console.log(produitEnregistreDansLocalStorage);
-
                 // on envoie la variable dans le LocalStorage
                 // La transformation en format JSON et l'envoyer dans la key "produit" du LocalStorage
                 if (produitEnregistreDansLocalStorage.length > 0) {
@@ -100,31 +80,23 @@
                 } else {
                     localStorage.removeItem("produit");
                 }
-
                 // Alerte pour prévenir que le produit a bien été supprimer et rechargement de la page
                 alert("Ce produit a été supprimer du panier.")
                 window.location.href = "/FrontEnd/html/panier.html";
-
             })
         }
 
         // Le bouton pour vider le panier 
         // Le code HTML du bouton a afficher dans la page
-
         const btn__Delete_Bucket_html = `
         <div class="btn__Empty_Bucket">
         <button id="btn-Delete-Bucket" type="submit" name="bouton-Delete-Bucket">Vider le panier</button>
         </div>
         `;
-        console.log(positionElement);
         // Insertion du bouton dans le HTML du panier
-
         positionElement.insertAdjacentHTML("beforeend", btn__Delete_Bucket_html);
-
         // Selection de la référence du bouton "btn-Delete-Bucket"
         const btn__Delete_Bucket = document.querySelector("#btn-Delete-Bucket");
-        console.log(btn__Delete_Bucket);
-
         // Suppremier de la Key "produit" du localStorage pour vider le panier
         btn__Delete_Bucket.addEventListener('click', (e) => {
             e.preventDefault;
@@ -319,7 +291,6 @@
         }
 
         // Controle de la validité du prenom
-
         function prenomControle(lePrenom) {
             if (regExPrenomNomVille(lePrenom)) {
                 return true;
@@ -328,9 +299,7 @@
                 return false;
             }
         };
-
         // Controle de la validité du nom
-
         function nomControle(leNom) {
             if (regExPrenomNomVille(leNom)) {
                 return true;
@@ -339,9 +308,7 @@
                 return false;
             }
         };
-
         // Controle de la validité du Code Postal
-
         function codePostalControle(leCodePostal) {
             if (regExCodePostal(leCodePostal)) {
                 return true;
@@ -350,9 +317,7 @@
                 return false;
             }
         };
-
         // Controle de la validité de l email
-
         function emailControle(leEmail) {
             if (regExEmail(leEmail)) {
                 return true;
@@ -361,9 +326,7 @@
                 return false;
             }
         };
-
         // Controle de la validité de l adresse
-
         function adresseControle(leAdresse) {
             if (regExAdresse(leAdresse)) {
                 return true;
