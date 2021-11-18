@@ -8,10 +8,8 @@ Entrer la commande : npm install
 Ensuite entrer la commande "npm start" pour lancer le backend. 
 Le terminal doit rester activer tout le long du fonctionnement du site.
 
-Si vous avez live server. Aller dans le dossier FrontEnd et sélectionner le fichier index.html
+Aller dans le dossier FrontEnd et sélectionner le fichier index.html
 choisir l'option Open With Live Server. 
-
-Si vous n'avez pas live server vous pouvez simplement lancer le fichier index.html dans votre navigateur.
 
 ---------------------------------
 
