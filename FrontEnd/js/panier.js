@@ -185,7 +185,7 @@
             const formulaireValues = new Formulaire("ville");
 
             // Mettre  l'objet "formulaireValues" dans le LocalStorage
-            if (prenomControle(formulaireValues.prenom) && nomControle(formulaireValues.nom) && codePostalControle(formulaireValues.codePostal) && emailControle(formulaireValues.email) && adresseControle(formulaireValues.adresse)) {
+            if (prenomControle(formulaireValues.prenom) && nomControle(formulaireValues.nom) && codePostalControle(formulaireValues.codePostal) && emailControle(formulaireValues.email) && adresseControle(formulaireValues.adresse) && villeControle(formulaireValues.ville)) {
                 localStorage.setItem("formulaireValues", JSON.stringify(formulaireValues));
              
                 // Mettre les values du formulaire et mettre les produits sélectionnés dans un objet a envoyer vers le serveur
@@ -278,6 +278,10 @@
             return /^[A-Za-z]{3,20}$/.test(value);
         }
 
+        const regExVille = (value) => {
+            return /^[A-Za-z0-9\s]{5,50}$/.test(value);
+        }
+
         const regExCodePostal = (value) => {
             return /^[0-9]{4}$/.test(value);
         }
@@ -332,6 +336,16 @@
                 return true;
             } else {
                 alert("L'adresse n'est pas valide.");
+                return false;
+            }
+        };
+
+        // Controle de la validité de la ville
+        function villeControle(leVille) {
+            if (regExAdresse(leVille)) {
+                return true;
+            } else {
+                alert("La ville n'est pas valide.");
                 return false;
             }
         };
